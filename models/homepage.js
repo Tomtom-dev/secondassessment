@@ -8,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     userId: DataTypes.INTEGER
   }, {});
   Homepage.associate = function(models) {
+    Homepage.hasMany(models.story)
     // associations can be defined here
   };
   return Homepage;

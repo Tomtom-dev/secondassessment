@@ -8,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Story.associate = function(models) {
     // associations can be defined here
+    Story.belongsTo(models.homepage)
   };
   return Story;
 };

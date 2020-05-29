@@ -9,6 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       content: {
@@ -18,6 +19,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       homepageId: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       createdAt: {
