@@ -18,6 +18,9 @@ module.exports = {
         model: "homepages",
         key: "id",
       },
+      onUpdate: "CASCADE",
+      onDelete: "SET NULL",
+      allowNull: false
     })
     
   },

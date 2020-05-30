@@ -7,7 +7,8 @@ module.exports = (sequelize, DataTypes) => {
     },
     description: DataTypes.TEXT,
     backgroundColor: DataTypes.STRING,
-    color: DataTypes.STRING
+    color: DataTypes.STRING,
+    
   }, {});
   homepage.associate = function(models) {
     homepage.belongsTo(models.user);

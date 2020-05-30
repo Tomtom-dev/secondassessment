@@ -5,7 +5,7 @@ module.exports = {
     return queryInterface.bulkInsert("stories",[
       {
         name:"epic fail",
-        content:"during holidays i went to feed the chicken, then the cock arrive and jump on me trying to reach my head and bite my legs. I flee.",
+        content:"during holidays i went to feed the chicken, then the rooster arrive and jump on me trying to reach my head and bite my legs. I flee.",
         imageUrl:"https://trustmyscience.com/wp-content/uploads/2019/09/deces-blessures-coq-750x400.jpeg",
         createdAt: new Date(),
         updatedAt: new Date(),

@@ -1,10 +1,13 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Story = sequelize.define('Story', {
-    name: DataTypes.STRING,
+  const Story = sequelize.define('story', {
+    name: {
+      type:DataTypes.STRING,
+      allowNull:false
+    },
     content: DataTypes.TEXT,
     imageUrl: DataTypes.STRING,
-    homepageId: { type: DataTypes.INTEGER, allowNull: false }
+    // homepageId: { type: DataTypes.INTEGER, allowNull: false }
   }, {});
 
   Story.associate = function(models) {
