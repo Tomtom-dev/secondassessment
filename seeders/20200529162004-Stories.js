@@ -2,13 +2,14 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert("Stories",[
+    return queryInterface.bulkInsert("stories",[
       {
         name:"epic fail",
         content:"during holidays i went to feed the chicken, then the cock arrive and jump on me trying to reach my head and bite my legs. I flee.",
         imageUrl:"https://trustmyscience.com/wp-content/uploads/2019/09/deces-blessures-coq-750x400.jpeg",
         createdAt: new Date(),
         updatedAt: new Date(),
+        homepageId:1
       },
       {
         name:"epic meet",
@@ -16,6 +17,7 @@ module.exports = {
         imageUrl:"https://3sztbw4a0trwgvf4b3onphvv-wpengine.netdna-ssl.com/wp-content/uploads/2017/09/Bill-Nighy-small-WEB.jpg",
         createdAt: new Date(),
         updatedAt: new Date(),
+        homepageId:2
       },
       {
         name:"epic museum",
@@ -23,6 +25,7 @@ module.exports = {
         imageUrl:"https://img.20mn.fr/h2yDuKBPTB-92cingUnCIA/640x410_laurie-corbier-responsable-collection-cinema-sein-musee-miniature-cinema-lyon-reussi-rassembler-pieces-cinq-costumes-super-heros-eparpillees-travers-m.jpg",
         createdAt: new Date(),
         updatedAt: new Date(),
+        homepageId:2
       },
       {
         name:"another epic meeting",
@@ -30,12 +33,13 @@ module.exports = {
         imageUrl:"https://www.nwf.org/-/media/NEW-WEBSITE/Shared-Folder/Wildlife/Reptiles/reptile_green-sea-turtles-hawaii_shutterstock_600x300.ashx",
         createdAt: new Date(),
         updatedAt: new Date(),
+        homepageId:2
       }
     ],{})
     
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Stories', null, {});
+    return queryInterface.bulkDelete('stories', null, {});
   }
 };

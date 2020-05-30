@@ -1,16 +1,17 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Homepage = sequelize.define('Homepage', {
-    title: DataTypes.STRING,
+  const homepage = sequelize.define('homepage', {
+    title: { 
+      type: DataTypes.STRING, 
+      allowNull: false,
+    },
     description: DataTypes.TEXT,
     backgroundColor: DataTypes.STRING,
-    color: DataTypes.STRING,
-    userId: DataTypes.INTEGER
+    color: DataTypes.STRING
   }, {});
-  Homepage.associate = function(models) {
-    Homepage.hasMany(models.story)
-    Homepage.belongsTo(models.user)
-    // associations can be defined here
+  homepage.associate = function(models) {
+    homepage.belongsTo(models.user);
+    homepage.hasMany(models.story)
   };
-  return Homepage;
+  return homepage;
 };

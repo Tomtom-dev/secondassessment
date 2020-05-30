@@ -3,7 +3,7 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert(
-      "Homepages",
+      "homepages",
       [
         {
           title: "How i stoped smoke ",
@@ -12,6 +12,7 @@ module.exports = {
           color:"#03010d",
           createdAt: new Date(),
           updatedAt: new Date(),
+          userId:1
         },
         {
           title: "how i started programming",
@@ -20,11 +21,12 @@ module.exports = {
           color:"#03010d",
           createdAt: new Date(),
           updatedAt: new Date(),
+          userId:2
         }
     ],{})
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Homepages', null, {});
+    return queryInterface.bulkDelete('homepages', null, {});
   }
 };

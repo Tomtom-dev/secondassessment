@@ -4,10 +4,10 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     content: DataTypes.TEXT,
     imageUrl: DataTypes.STRING,
-    homepageId: DataTypes.INTEGER
+    homepageId: { type: DataTypes.INTEGER, allowNull: false }
   }, {});
+
   Story.associate = function(models) {
-    // associations can be defined here
     Story.belongsTo(models.homepage)
   };
   return Story;
