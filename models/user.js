@@ -20,6 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   user.associate = function(models) {
+    user.hasOne(models.homepage)
     // associations can be defined here
   };
   return user;

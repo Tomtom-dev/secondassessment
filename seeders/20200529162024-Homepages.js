@@ -12,7 +12,6 @@ module.exports = {
           color:"#03010d",
           createdAt: new Date(),
           updatedAt: new Date(),
-          userId:1
         },
         {
           title: "how i started programming",
@@ -21,7 +20,6 @@ module.exports = {
           color:"#03010d",
           createdAt: new Date(),
           updatedAt: new Date(),
-          userId:2
         }
     ],{})
   },

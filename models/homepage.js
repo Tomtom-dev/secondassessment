@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Homepage.associate = function(models) {
     Homepage.hasMany(models.story)
+    Homepage.belongsTo(models.user)
     // associations can be defined here
   };
   return Homepage;
