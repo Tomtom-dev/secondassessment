@@ -1,5 +1,12 @@
 const express = require("express");
 const app = express();
+const jsonParser= express.json();
+const cors = require ('cors')
+const homepageRouter= require('./routers/homepage')
+
+app.use(jsonParser)
+app.use(cors())
+app.use("/",homepageRouter)
 
 /**
  * Middlewares
@@ -149,6 +156,7 @@ app.post("/authorized_post_request", authMiddleWare, (req, res) => {
 });
 
 const authRouter = require("./routers/auth");
+
 app.use("/", authRouter);
 
 // Listen for connections on specified port (default is port 4000)
