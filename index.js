@@ -6,7 +6,9 @@ const homepageRouter= require('./routers/homepage')
 
 app.use(jsonParser)
 app.use(cors())
+
 app.use("/",homepageRouter)
+app.use("/homepages", homepageRouter)
 
 /**
  * Middlewares
