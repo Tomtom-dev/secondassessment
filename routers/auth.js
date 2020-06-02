@@ -17,9 +17,13 @@ router.post("/login", async (req, res, next) => {
         .send({ message: "Please provide both email and password" });
     }
 
-    const user = await User.findOne({ where: { email } });
+    const user = await User.findOne({ where: { email },include: {
+      model: Homepage,
+      include: [Story],
+      order: [[Story, "createdAt", "DESC"]],
+    }, });
 
-    if (!user || !bcrypt.compareSync(password, user.password)) {
+    if (!user || !bcrypt.compareSync(password, user.password)) { 
       return res.status(400).send({
         message: "User with that email not found or password incorrect"
       });

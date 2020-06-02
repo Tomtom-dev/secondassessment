@@ -11,7 +11,7 @@ router.get("/", async (req, res,next) => {
         const allHomepages =await Homepage.findAll();
         console.log(allHomepages);
         
-        res.json(allHomepages)
+        res.send(allHomepages)
     }catch(error){
         next(error)
     }
